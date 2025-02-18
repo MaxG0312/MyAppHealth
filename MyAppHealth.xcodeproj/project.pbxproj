@@ -11,6 +11,8 @@
 		C3B4FB162D647087005D2133 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4FB152D647087005D2133 /* ContentView.swift */; };
 		C3B4FB182D647088005D2133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B4FB172D647088005D2133 /* Assets.xcassets */; };
 		C3B4FB1B2D647088005D2133 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B4FB1A2D647088005D2133 /* Preview Assets.xcassets */; };
+		C3B4FB2A2D647F12005D2133 /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4FB292D647F12005D2133 /* MainAppView.swift */; };
+		C3B4FB2C2D647F6A005D2133 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4FB2B2D647F6A005D2133 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		C3B4FB152D647087005D2133 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C3B4FB172D647088005D2133 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3B4FB1A2D647088005D2133 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C3B4FB292D647F12005D2133 /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
+		C3B4FB2B2D647F6A005D2133 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,10 @@
 		C3B4FB122D647087005D2133 /* MyAppHealth */ = {
 			isa = PBXGroup;
 			children = (
+				C3B4FB232D64714B005D2133 /* Models */,
+				C3B4FB222D64713D005D2133 /* ViewModels */,
+				C3B4FB212D64712D005D2133 /* Views */,
 				C3B4FB132D647087005D2133 /* MyAppHealthApp.swift */,
-				C3B4FB152D647087005D2133 /* ContentView.swift */,
 				C3B4FB172D647088005D2133 /* Assets.xcassets */,
 				C3B4FB192D647088005D2133 /* Preview Content */,
 			);
@@ -65,6 +71,54 @@
 				C3B4FB1A2D647088005D2133 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C3B4FB212D64712D005D2133 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C3B4FB152D647087005D2133 /* ContentView.swift */,
+				C3B4FB262D6471A4005D2133 /* RemindersView */,
+				C3B4FB252D64719A005D2133 /* AppView */,
+				C3B4FB242D647182005D2133 /* HomeView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C3B4FB222D64713D005D2133 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C3B4FB232D64714B005D2133 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C3B4FB242D647182005D2133 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				C3B4FB2B2D647F6A005D2133 /* MainView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		C3B4FB252D64719A005D2133 /* AppView */ = {
+			isa = PBXGroup;
+			children = (
+				C3B4FB292D647F12005D2133 /* MainAppView.swift */,
+			);
+			path = AppView;
+			sourceTree = "<group>";
+		};
+		C3B4FB262D6471A4005D2133 /* RemindersView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RemindersView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +192,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3B4FB162D647087005D2133 /* ContentView.swift in Sources */,
+				C3B4FB2A2D647F12005D2133 /* MainAppView.swift in Sources */,
 				C3B4FB142D647087005D2133 /* MyAppHealthApp.swift in Sources */,
+				C3B4FB2C2D647F6A005D2133 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
