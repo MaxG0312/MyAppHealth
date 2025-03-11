@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C34FF33D2D801ED4001CE865 /* MainRemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34FF33C2D801ED4001CE865 /* MainRemindersView.swift */; };
 		C3B4FB142D647087005D2133 /* MyAppHealthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4FB132D647087005D2133 /* MyAppHealthApp.swift */; };
 		C3B4FB162D647087005D2133 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4FB152D647087005D2133 /* ContentView.swift */; };
 		C3B4FB182D647088005D2133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B4FB172D647088005D2133 /* Assets.xcassets */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C34FF33C2D801ED4001CE865 /* MainRemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainRemindersView.swift; path = ../../../../MainRemindersView.swift; sourceTree = "<group>"; };
 		C3B4FB102D647087005D2133 /* MyAppHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAppHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B4FB132D647087005D2133 /* MyAppHealthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppHealthApp.swift; sourceTree = "<group>"; };
 		C3B4FB152D647087005D2133 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 		C3B4FB262D6471A4005D2133 /* RemindersView */ = {
 			isa = PBXGroup;
 			children = (
-				C34FF33C2D801ED4001CE865 /* MainRemindersView.swift */,
 			);
 			path = RemindersView;
 			sourceTree = "<group>";
@@ -195,7 +192,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3B4FB162D647087005D2133 /* ContentView.swift in Sources */,
-				C34FF33D2D801ED4001CE865 /* MainRemindersView.swift in Sources */,
 				C3B4FB2A2D647F12005D2133 /* MainAppView.swift in Sources */,
 				C3B4FB142D647087005D2133 /* MyAppHealthApp.swift in Sources */,
 				C3B4FB2C2D647F6A005D2133 /* MainView.swift in Sources */,
