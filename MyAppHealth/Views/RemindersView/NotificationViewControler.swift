@@ -58,7 +58,8 @@ class NotificationViewControler: UIViewController {
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: isdaily)
         let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
         
-        notificationCenter.removeAllPendingNotificationRequests(withIdentifiers: )
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: [id])
+        notificationCenter.add(request)
     }
     
 }
