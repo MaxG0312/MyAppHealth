@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C31BD2742D8ABA93004F27A7 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BD2732D8ABA93004F27A7 /* TimePicker.swift */; };
+		C31BD2762D8AC92B004F27A7 /* ReminderEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BD2752D8AC92B004F27A7 /* ReminderEditView.swift */; };
 		C34FF3422D801FFB001CE865 /* MainRemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34FF3412D801FFB001CE865 /* MainRemindersView.swift */; };
 		C34FF3442D802DB2001CE865 /* NotificationViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34FF3432D802DB2001CE865 /* NotificationViewControler.swift */; };
 		C3B4FB142D647087005D2133 /* MyAppHealthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4FB132D647087005D2133 /* MyAppHealthApp.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		C31BD2732D8ABA93004F27A7 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		C31BD2752D8AC92B004F27A7 /* ReminderEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEditView.swift; sourceTree = "<group>"; };
 		C34FF3412D801FFB001CE865 /* MainRemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRemindersView.swift; sourceTree = "<group>"; };
 		C34FF3432D802DB2001CE865 /* NotificationViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewControler.swift; sourceTree = "<group>"; };
 		C3B4FB102D647087005D2133 /* MyAppHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAppHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,7 @@
 			children = (
 				C34FF3432D802DB2001CE865 /* NotificationViewControler.swift */,
 				C34FF3412D801FFB001CE865 /* MainRemindersView.swift */,
+				C31BD2752D8AC92B004F27A7 /* ReminderEditView.swift */,
 			);
 			path = RemindersView;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C31BD2762D8AC92B004F27A7 /* ReminderEditView.swift in Sources */,
 				C3B4FB162D647087005D2133 /* ContentView.swift in Sources */,
 				C34FF3422D801FFB001CE865 /* MainRemindersView.swift in Sources */,
 				C31BD2742D8ABA93004F27A7 /* TimePicker.swift in Sources */,
