@@ -11,23 +11,22 @@ import UserNotifications
 class NotificationViewControler: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkPermission()
-    }
+}
     
-    func checkPermission() {
+    func checkPermission(rem: Reminder) {
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.getNotificationSettings { settings in
             switch settings.authorizationStatus {
             case .notDetermined:
                 notificationCenter.requestAuthorization(options: [.alert, .sound]) { didAllow, error in
                     if didAllow {
-                        self.dispatchNotification()
+                        self.dispatchNotification(rem: rem)
                     }
                 }
             case .denied:
                 return
             case .authorized:
-                self.dispatchNotification()
+                self.dispatchNotification(rem: rem)
             default :
                 return
             }
@@ -35,12 +34,12 @@ class NotificationViewControler: UIViewController {
         
     }
     
-    func dispatchNotification() {
-        let id = "id"
-        let title = "title"
-        let body = "body"
-        let hour = 16
-        let minute = 0
+    func dispatchNotification(rem: Reminder) {
+        let id = "Reminder_MyAppHealth_" + rem.title
+        let title = "MyAppHealth"
+        let body = "Your screen time reminder : " + rem.title + " is ringing"
+        let hour = rem.hour
+        let minute = rem.min
         let isdaily = true
         
         let notificationCenter = UNUserNotificationCenter.current()

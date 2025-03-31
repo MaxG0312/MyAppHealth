@@ -10,6 +10,7 @@ import Foundation
 class ReminderViewModel: ObservableObject {
     
     @Published var reminders: [Reminder] = []
+    private let notificationController = NotificationViewControler()
     
     init() {
         getReminders()
@@ -21,6 +22,7 @@ class ReminderViewModel: ObservableObject {
     
     func addReminder(reminder: Reminder) {
         self.reminders.append(reminder)
+        notificationController.checkPermission(rem: reminder)
     }
     
     func deleteReminder(indexSet: IndexSet) {
@@ -35,8 +37,8 @@ class ReminderViewModel: ObservableObject {
         for (index, r) in reminders.enumerated() {
             if rem.id == r.id {
                 self.reminders[index] = newRem
+                notificationController.checkPermission(rem: newRem)
             }
         }
     }
-    
 }
