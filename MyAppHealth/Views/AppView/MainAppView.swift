@@ -18,8 +18,8 @@ struct MainAppView: View {
             Spacer()
             
             Picker("Afficher par", selection: $viewModel.groupByApp) {
-                Text("Application").tag(true)
-                Text("Groupe").tag(false)
+                Text("Apps").tag(true)
+                Text("Groups").tag(false)
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()

@@ -21,7 +21,7 @@ class HomeDataViewModel: ObservableObject {
     @Published var topAppsToday: [(String, Float)] = []
 
     private var timeUsageData: [AppSession] = []
-    let daysOfWeek = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
+    let daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
 
     init() {
