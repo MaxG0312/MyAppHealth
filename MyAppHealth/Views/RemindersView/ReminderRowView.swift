@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ReminderRowView: View {
+    @StateObject var remVM: ReminderViewModel
     
     let rem: Reminder
     
@@ -21,17 +22,12 @@ struct ReminderRowView: View {
                         
             Spacer()
             
-            NavigationLink(destination: ReminderEditView(rem: rem)){
+            NavigationLink(destination: ReminderEditView(rem: rem, remVM: remVM)){
                 
             }
         }
         .padding(5)
         .border(Color.blue)
-        .frame(width: .infinity)
         .aspectRatio(contentMode: .fill)
     }
-}
-
-#Preview {
-    ReminderRowView(rem: Reminder.testData[0])
 }

@@ -1,74 +1,53 @@
-//
-//  SwiftUIView.swift
-//  MyAppHealth
-//
-//  Created by gelin maxence on 18/02/2025.
-//
-
 import SwiftUI
+import Charts
 
 struct MainAppView: View {
+    @StateObject private var viewModel = AppDataViewModel()
+    
     var body: some View {
         VStack {
-            Text("Your Apps")
+            
+            Spacer()
+            
+            Text("Your Activity")
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.largeTitle)
                 .bold()
+                .padding(15)
+            
+            Spacer()
+            
+            Picker("Afficher par", selection: $viewModel.groupByApp) {
+                Text("Application").tag(true)
+                Text("Groupe").tag(false)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            
+            Chart(viewModel.groupedData, id: \.0) { name, duration in
+                BarMark(
+                    x: .value("Durée", duration),
+                    y: .value("Nom", name)
+                )
                 .foregroundStyle(.blue)
-                .padding(15)
-            
-            Image(systemName: "rectangle.fill")
-                .renderingMode(.original)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 250, height: 250)
-                .foregroundStyle(.gray)
-                .padding(15)
-            
-            
-            HStack(spacing: 0) {
-                Button{
-                    
-                } label: {
-                    Text("Week")
-                        .padding(5)
-                }
-                .clipShape(Rectangle())
-                    .border(.gray)
-                Button{
-                    
-                } label: {
-                    Text("Month")
-                        .padding(5)
-                }
-                    .clipShape(Rectangle())
-                    .border(.gray)
-                Button{
-                    
-                } label: {
-                    Text("Year")
-                        .padding(5)
-                }
-                    .clipShape(Rectangle())
-                    .border(.gray)
             }
-            
-            Spacer()
-            
-            Group {
-                Text("XX Hours on App1 this week")
-                Text("XX Hours on App2 this week")
-                Text("XX Hours on App3 this week")
+            .frame(height: 300)
+            .padding()
+            .chartXAxis {
+                AxisMarks(position: .bottom) { value in
+                    AxisGridLine()
+                    AxisTick()
+                    AxisValueLabel() {
+                        if let duration = value.as(Float.self) {
+                            Text(String(format: "%.1f h", duration))
+                        }
+                    }
+                }
             }
-            .font(.title)
-            .padding([.top],15)
-            
-            
+            .chartYAxis {
+                AxisMarks(position: .leading)
+            }
             Spacer()
-            
-            Rectangle()
-                .frame(height: 75)
-                .foregroundStyle(.gray)
-                .padding([.top],15)
         }
     }
 }

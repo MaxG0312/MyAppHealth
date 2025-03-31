@@ -9,17 +9,14 @@ import SwiftUI
 
 struct MainRemindersView: View {
     
-    // var data: [Todo]
-    @EnvironmentObject var remVM: ReminderViewModel
+    @StateObject var remVM = ReminderViewModel()
     
     var body: some View {
-        // barre de navigation pour edit et add et page d'accueil
         NavigationView {
-            // tâches sous forme de liste
+            
             List {
                 ForEach(remVM.reminders) {
-                    // appel du "composant/slot"
-                    reminder in ReminderRowView(rem: reminder)
+                    reminder in ReminderRowView(remVM: remVM, rem: reminder)
                 }
                 .onDelete(perform: remVM.deleteReminder)
                 .onMove(perform: remVM.moveReminder)

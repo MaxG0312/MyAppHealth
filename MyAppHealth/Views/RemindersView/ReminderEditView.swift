@@ -11,7 +11,7 @@ struct ReminderEditView: View {
     let rem: Reminder
     
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var remVM: ReminderViewModel
+    @StateObject var remVM: ReminderViewModel
     
     @State var hour: Int = 0
     @State var min: Int = 0
@@ -60,6 +60,3 @@ struct ReminderEditView: View {
     }
 }
 
-#Preview {
-    ReminderEditView(rem: Reminder.testData[0])
-}

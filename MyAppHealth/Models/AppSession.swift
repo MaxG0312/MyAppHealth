@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+struct AppSession: Identifiable {
+    // identifiable doit toujours avoir un id
+    var id = UUID()
+    var appId = In
+    var hour: Int
+    var min: Int
+    var sec: Int
+    
+    static var testData = [
+        Reminder(title: "Work Start", hour: 9, min: 0, sec: 0),
+        Reminder(title: "Cook Dinner", hour: 19, min: 30, sec: 0),
+        Reminder(title: "Sleep", hour: 22, min: 0, sec: 0)
+    ]
+    
+}
