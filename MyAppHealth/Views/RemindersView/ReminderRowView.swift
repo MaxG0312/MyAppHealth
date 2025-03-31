@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct ReminderRowView: View {
+    
+    let rem: Reminder
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text(rem.title)
+            
+            Spacer()
+            
+            Text(rem.hour.codingKey.stringValue + ":" + rem.min.codingKey.stringValue + ":" + rem.sec.codingKey.stringValue)
+                        
+            Spacer()
+            
+            NavigationLink(destination: ReminderEditView(rem: rem)){
+                
+            }
+        }
+        .padding(5)
+        .border(Color.blue)
+        .frame(width: .infinity)
+        .aspectRatio(contentMode: .fill)
     }
 }
 
 #Preview {
-    ReminderRowView()
+    ReminderRowView(rem: Reminder.testData[0])
 }

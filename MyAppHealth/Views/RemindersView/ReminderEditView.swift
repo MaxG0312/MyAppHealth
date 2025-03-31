@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ReminderEditView: View {
+    let rem: Reminder
+    
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var remVM: ReminderViewModel
     
@@ -15,6 +17,7 @@ struct ReminderEditView: View {
     @State var min: Int = 0
     @State var sec: Int = 0
     @State var reminderTitle: String = ""
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -24,13 +27,17 @@ struct ReminderEditView: View {
                                 .background(Color(.systemGray4))
                                 .cornerRadius(10)
                 
+                Spacer()
+                
                 TimePicker(hour: $hour, min: $min, sec: $sec)
                     .padding(15)
                     .background(.white, in: .rect(cornerRadius: 10))
                     .padding(.horizontal, 20)
                 
+                Spacer()
+                
                 Button {
-                                self.remVM.addReminder(reminder: Reminder(title: reminderTitle, hour: hour, min: min, sec: sec))
+                    self.remVM.updateReminder(rem: rem, newRem: Reminder(title: reminderTitle, hour: hour, min: min, sec: sec))
                                 self.presentationMode.wrappedValue.dismiss()
                             } label: {
                                 Text("SAVE")
@@ -46,7 +53,7 @@ struct ReminderEditView: View {
                             Spacer()
             }
             .padding(15)
-            .navigationTitle("Reminder Edit")
+            .navigationTitle("Editing : " + rem.title)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.gray.opacity(0.15))
         }
@@ -54,5 +61,5 @@ struct ReminderEditView: View {
 }
 
 #Preview {
-    ReminderEditView()
+    ReminderEditView(rem: Reminder.testData[0])
 }

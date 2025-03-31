@@ -31,12 +31,10 @@ class ReminderViewModel: ObservableObject {
         self.reminders.move(fromOffsets: from, toOffset: to)
     }
     
-    func updateReminder(reminder: Reminder, hour: Int, min: Int, sec: Int) {
+    func updateReminder(rem: Reminder, newRem: Reminder) {
         for (index, r) in reminders.enumerated() {
-            if reminder.id == r.id {
-                self.reminders[index].hour = hour
-                self.reminders[index].min = min
-                self.reminders[index].sec = sec
+            if rem.id == r.id {
+                self.reminders[index] = newRem
             }
         }
     }

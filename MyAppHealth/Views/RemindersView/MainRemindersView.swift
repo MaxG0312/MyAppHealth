@@ -8,58 +8,35 @@
 import SwiftUI
 
 struct MainRemindersView: View {
+    
+    // var data: [Todo]
+    @EnvironmentObject var remVM: ReminderViewModel
+    
     var body: some View {
-        VStack {
-            Text("Your Reminders")
-                .font(.largeTitle)
-                .bold()
-                .foregroundStyle(.blue)
-                .padding(15)
-            
-            VStack {
-                HStack {
-                    Text("Lorem Ipsum")
-                    
-                    Spacer()
-                    
-                    Image(systemName: "pencil")
-                    
-                    Image(systemName: "trash")
-                        .foregroundStyle(Color.red)
+        // barre de navigation pour edit et add et page d'accueil
+        NavigationView {
+            // tâches sous forme de liste
+            List {
+                ForEach(remVM.reminders) {
+                    // appel du "composant/slot"
+                    reminder in ReminderRowView(rem: reminder)
                 }
-                .padding(5)
-                .border(Color.blue)
-                .frame(width:250)
-                .aspectRatio(contentMode: .fill)
+                .onDelete(perform: remVM.deleteReminder)
+                .onMove(perform: remVM.moveReminder)
             }
             
-            Spacer()
-            
-            Button{
-                
-            } label: {
-                Text("Add New")
-                    .padding(5)
+            .listStyle(PlainListStyle())
+            .navigationTitle("Your reminders")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink("Add", destination: ReminderAddView())
+                }
             }
-            .frame(width: 250)
-            .clipShape(Rectangle())
-                .border(.gray)
-            
-            
-            Spacer()
-            
-            
-            
-            Spacer()
-            
-            Rectangle()
-                .frame(height: 75)
-                .foregroundStyle(.gray)
-                .padding([.top],15)
         }
     }
 }
 
 #Preview {
     MainRemindersView()
+        .environmentObject(ReminderViewModel())
 }
