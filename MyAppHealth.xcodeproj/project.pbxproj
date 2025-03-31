@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C300E2072D9A84B40051D997 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C300E2062D9A84B40051D997 /* AppSession.swift */; };
+		C300E20A2D9A89D60051D997 /* ReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C300E2092D9A89D60051D997 /* ReminderViewModel.swift */; };
+		C300E20C2D9A8A110051D997 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C300E20B2D9A8A110051D997 /* Reminder.swift */; };
 		C31BD2742D8ABA93004F27A7 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BD2732D8ABA93004F27A7 /* TimePicker.swift */; };
 		C31BD2762D8AC92B004F27A7 /* ReminderEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31BD2752D8AC92B004F27A7 /* ReminderEditView.swift */; };
 		C34FF3422D801FFB001CE865 /* MainRemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34FF3412D801FFB001CE865 /* MainRemindersView.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C300E2062D9A84B40051D997 /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
+		C300E2092D9A89D60051D997 /* ReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewModel.swift; sourceTree = "<group>"; };
+		C300E20B2D9A8A110051D997 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		C31BD2732D8ABA93004F27A7 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		C31BD2752D8AC92B004F27A7 /* ReminderEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderEditView.swift; sourceTree = "<group>"; };
 		C34FF3412D801FFB001CE865 /* MainRemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRemindersView.swift; sourceTree = "<group>"; };
@@ -44,6 +50,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C300E2052D9A84970051D997 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C300E2062D9A84B40051D997 /* AppSession.swift */,
+				C300E20B2D9A8A110051D997 /* Reminder.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C300E2082D9A89BA0051D997 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C300E2092D9A89D60051D997 /* ReminderViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		C34FF3402D801FE5001CE865 /* RemindersView */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +96,8 @@
 		C3B4FB122D647087005D2133 /* MyAppHealth */ = {
 			isa = PBXGroup;
 			children = (
+				C300E2082D9A89BA0051D997 /* ViewModels */,
+				C300E2052D9A84970051D997 /* Models */,
 				C3B4FB212D64712D005D2133 /* Views */,
 				C3B4FB132D647087005D2133 /* MyAppHealthApp.swift */,
 				C3B4FB172D647088005D2133 /* Assets.xcassets */,
@@ -187,6 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C300E20A2D9A89D60051D997 /* ReminderViewModel.swift in Sources */,
+				C300E2072D9A84B40051D997 /* AppSession.swift in Sources */,
+				C300E20C2D9A8A110051D997 /* Reminder.swift in Sources */,
 				C31BD2762D8AC92B004F27A7 /* ReminderEditView.swift in Sources */,
 				C3B4FB162D647087005D2133 /* ContentView.swift in Sources */,
 				C34FF3422D801FFB001CE865 /* MainRemindersView.swift in Sources */,
